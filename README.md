@@ -13,14 +13,12 @@ the two concrete classes include:
 - `public static void takeOrder(PIZZA order)` -- method for user input :D
 - `public static void payment(double amountDue)` -- method for payment output
 
-i decided to make these methods so i wouldn't have to type them twice in the main function (bc i used an if-else for the choice D:).
-
 the abstract class `public abstract double calculatePrice(String type)` is what calculates the price. parameter is there bc of the special pizza.
 
 ## Discountable
 Requirements: Interface defining discount-related behavior.
 
-yes
+i placed an abstract method `double getDiscountRate()`
 
 ## PIZZA
 Requirements: Concrete class representing a pizza order; extends PizzaBase and implements Discountable.
