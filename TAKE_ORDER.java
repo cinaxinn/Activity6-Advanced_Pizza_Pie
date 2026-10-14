@@ -19,21 +19,18 @@ public class TAKE_ORDER {
 
         System.out.println();
 
+        PIZZA order;
         if (choice == 1) {
-            PIZZA order = new PIZZA();
-            PizzaBase.takeOrder(order);
-            double amountDue = BILL_ORDER.OUT(order);
-            PizzaBase.payment(amountDue);
-        } else if (choice == 2) {
-            SPECIAL_PIZZA order = new SPECIAL_PIZZA();
-            PizzaBase.takeOrder(order);
-            double amountDue = BILL_ORDER.OUT(order);
-            PizzaBase.payment(amountDue);
+            order = new PIZZA();
+        } else  {
+            order = new SPECIAL_PIZZA();
         }
 
+        PizzaBase.takeOrder(order);
+        double amountDue = BILL_ORDER.OUT(order);
+        PizzaBase.payment(amountDue);
+
     }
-
-
 
 }
 
