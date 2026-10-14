@@ -33,7 +33,7 @@ public class PIZZA extends PizzaBase implements Discountable {
             this.howMany = howMany;
         } else {
             System.out.println("Please input a positive quantity.");
-            System.out.printf("%-27s", "Enter How Many?:");
+            System.out.print("Enter How Many?: ");
             this.setHowMany(Integer.parseInt(scan.nextLine()));
         }
     }
@@ -43,7 +43,7 @@ public class PIZZA extends PizzaBase implements Discountable {
             this.discount = discount;
         } else {
             System.out.println("Please input a valid topping. (Senior Citizen, VIPCard, or No Discount)");
-            System.out.printf("%-27s", "Enter Type of Discount:");
+            System.out.print("Enter Type of Discount: ");
             this.setDiscount(scan.nextLine());
         }
     }
@@ -105,8 +105,5 @@ public class PIZZA extends PizzaBase implements Discountable {
                 return 0;
         }
     }
-
-
-
-
+    
 }
