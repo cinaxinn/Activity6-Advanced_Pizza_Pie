@@ -61,6 +61,7 @@ public class PIZZA extends PizzaBase implements Discountable {
     }
 
     // abstract method from PizzaBase
+    @Override
     public double calculatePrice(String type) {
         this.price = 0;
         switch (this.toppings.toLowerCase()) {
@@ -95,6 +96,8 @@ public class PIZZA extends PizzaBase implements Discountable {
         return this.calculatePrice("Regular");
     }
 
+    // abstract method from Discountable interface
+    @Override
     public double getDiscountRate() {
         switch (this.discount.toLowerCase()) {
             case "senior citizen":
